@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./scss/style.scss">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="upper_box">
+        <h1>Учет сотрудников в компании Wepro</h1>
+        <h3>Общее число сотрудников: <span class="collaborators"></span></h3>
+        <h3>Премию получат: <span class="premium"></span></h3>
+      </div>
+      <div class="middle_box">
+        <form action="#">
+          <input type="text" placeholder="Найти сотрудника">
+          <div class="btn_group">
+            <button id="all">Все сотрудники</button>
+            <button id="to_premium">На повышение</button>
+            <button id="more_than">З/П больше 1000$</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="botom_box">
+        <table>
+          <tr>
+            <td>
+              <form action="#" name="list">
+                <h3>User name</h3>
+                <input type="text" value="5000$">
+                <button id="cookie"></button>
+                <button id="delete_user"></button>
+                <button class="star"></button>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
