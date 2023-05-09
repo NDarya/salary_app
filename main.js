@@ -24,7 +24,7 @@ let incre = document.querySelector("#to_premium")
 let more = document.querySelector("#more_than")
 let premium = document.querySelector('.premium')
 let btns = document.querySelector('.btns')
-let userBox = document.querySelector('.user_box')
+let bottom = document.querySelector('.bottom_box')
 
 collaborators.innerHTML = users.length
 
@@ -38,8 +38,8 @@ search_inp.onkeyup = () => {
     })
     reload(filtered);
 }
-form.onsubmit = (e) => {
-    e.preventDefault()
+form.onsubmit = (event) => {
+    event.preventDefault()
 
     let user = {
         id: Math.random(),
@@ -58,7 +58,7 @@ form.onsubmit = (e) => {
 
 
 function reload(arr) {
-    main.innerHTML = ""
+ 
     arr.innerHTML = ""
     for (let item of arr) {
         let user_name = document.createElement('h3')
@@ -68,6 +68,8 @@ function reload(arr) {
         let bin_img = document.createElement('img')
         let delete_btn = document.createElement('button')
         let prem = document.createElement('img')
+        let user_box = document.createElement('div')
+        let btns = document.createElement('div')
 
         user_name.innerHTML = item.name
         user_salary.value = item.salary + "$"
@@ -80,7 +82,8 @@ function reload(arr) {
         cookie.append(cookie_img)
         delete_btn.append(bin_img)
         btns.append(cookie, delete_btn, prem)
-        userBox.append(user_name, user_salary, btns)
+        user_box.append(user_name, user_salary, btns)
+        bottom.prepend(user_box)
 
         user_name.onclick = () => {
             if (item.rise = true) {
@@ -91,7 +94,7 @@ function reload(arr) {
                 star.src = "./public/star.svg"
             }
 
-
+        }
             cookie.onclick = () => {
                 h3.classList.toggle("golden")
                 user_salary.classList.toggle("golden")
@@ -108,9 +111,9 @@ function reload(arr) {
                 reload(users)
             }
 
-            more_than.onclick = () => {
-                let n = users.filter(el => el.salary >= 1000)
-                reload(n)
+            more.onclick = () => {
+                let mr = users.filter(el => el.salary >= 1000)
+                reload(mr)
 
             }
 
@@ -119,12 +122,13 @@ function reload(arr) {
             }
 
             premium.onclick = () => {
-                let n = users.filter(el => el.rise === true)
-                reload(n)
+                let pr = users.filter(el => el.rise === true)
+                reload(pr)
             }
-        }
-    }
-    reload(users)
-}
+        
+    }}
+    
 
+
+reload(users)
 
