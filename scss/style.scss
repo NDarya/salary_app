@@ -7,6 +7,17 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.main {
+    border: 1px solid rgb(212, 212, 212);
+    margin-top: 40px;
+    width: 1056px;
+    background-color: rgb(255, 255, 255);
+    min-height: 150px;
+    -webkit-box-shadow: 9px 4px 48px 11px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 9px 4px 48px 11px rgba(34, 60, 80, 0.2);
+    box-shadow: 9px 4px 48px 11px rgba(34, 60, 80, 0.2);
+}
+
 .container {
     margin: 50px auto;
     width: 80%;
@@ -36,43 +47,93 @@
     .middle_box {
         background: #3D5A80;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 15px;
+        padding: 20px 50px;
 
-        form {
+        input {
+            max-width: 900px;
+            padding: 10px;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .btn_group {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-            border-radius: 15px;
-            padding: 20px 50px;
-            input{
-                max-width: 900px;
-                padding: 10px;
-                outline: none;
-                border: none;
-                border-radius: 8px;
+            gap: 0;
+
+            button {
+                width: 150px;
+                height: 38px;
+                cursor: pointer;
+                border: 1px solid #fff;
+                background: #3D5A80;
+                color: #fff;
+                font-size: 14px;
+                transition: all .5s ease;
+                padding: 5px;
             }
-            .btn_group{
-                display: flex;
-                gap: 0;
-                button{
-                    width: 150px;
-                    height: 38px;
-                    cursor: pointer;
-                    border: 1px solid #fff;
-                    background: #3D5A80;
-                    color: #fff;
-                    font-size: 14px;
-                    transition: all .5s ease;
-                    padding: 5px;
-                }
-                :hover{
-                    background: #fff;
-                    color: #000;
-                }
+
+            :hover {
+                background: #fff;
+                color: #000;
             }
         }
     }
+}
 
-    .bottom_box{
-        
+.bottom_box {
+    .user_box {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding: 20px;
+        gap: 200px;
+
+        input {
+            font-size: 18px;
+            text-align: center;
+            border: none;
+
+        }
+
+        .user_name {
+            width: 300px;
+            font-size: 20px;
+            font-weight: 100;
+        }
+
+    }
+
+    .get_prem {
+        color: rgb(166, 166, 47);
+        width: 35px;
+        height: 35px;
+        background-color: rgb(219, 219, 219);
+        border: none;
+    }
+
+    .del {
+        color: red;
+        width: 35px;
+        height: 35px;
+        border: none;
+        background-color: rgb(222, 218, 218);
+    }
+
+    .golden {
+        color: rgb(166, 166, 47);
+
+    }
+
+    .star {
+        width: 30px;
     }
 }
+
